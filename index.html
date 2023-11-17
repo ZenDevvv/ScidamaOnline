@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scidama Online</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="pieces.js"></script>
+    <script defer src="app.js"></script>
+
+</head>
+<body>
+
+    
+    <form id="room-form" autocomplete="off">
+        <h3>Scidama Online</h3>
+        <div id="text-box">
+            <input type="text" class="text-box" id="name-input" placeholder="Enter your name">
+            <input type="text" class="text-box" id="room-input" placeholder="Enter room ID">
+        </div>
+        <div id="button-box">
+            <button type="submit" class="room-button" id="create-button">Create room</button>
+            <button type="submit" class="room-button" id="find-button">Join room</button>
+        </div>
+        <div id="notif"></div>
+    </form>
+    
+    
+    <div id="game-container">
+        <div id="top-info">
+            <p>It is <span id="player"></span>'s turn.</p>
+            <p id="opponent">Waiting for players...</p>
+        </div>
+        <div id="body-content">
+            
+            <div id="gameboard"></div>
+            <div id="score-board">
+                <div id="player-score">
+                    <div id="blue-score-board"><span class="blue-score score">0</span></div>
+                    <div id="red-score-board"><span class="red-score score">0</span></div>
+                </div>
+                <div id="move-history">
+                    <div id="move-history-content">
+                        <div style="width: 100%; background-color: #888383;;">-------------History-------------</div>
+                        <!-- Your move history text goes here -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <p id="info-display"></p>
+    </div>
+
+    
+
+    <audio id="move-illegal001" autoplay="false" src="assets/sfx/move_illegal001.mp3"></audio>
+</body>
+</html>

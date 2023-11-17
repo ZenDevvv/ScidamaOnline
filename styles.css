@@ -1,0 +1,287 @@
+html {
+    min-height: 200px; /* Adjust the value to set your desired minimum viewport height */
+}
+
+h3{
+    margin: 0;
+}
+
+#top-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+#game-container {
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#body-content {
+    display: flex;
+    justify-content: center;
+    max-width: 916px;
+    max-width: 916px;
+}
+
+
+#gameboard {
+    width: 560px;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-wrap: wrap;
+    
+    border-style: solid;
+    border-width: 8px;
+    border-color: #9C090C;
+}
+
+
+#move-history {
+    background-color: rgb(84, 86, 82);
+    margin-left: 5px;
+    border-radius: 2px;
+
+    height: 560px;
+    width: 100%;
+    overflow: hidden; /* Hide overflow to prevent double scrollbars */
+}
+
+#move-history-content {
+    text-align: center;
+    height: 100%; /* Set a fixed height to enable scrolling */
+    overflow: auto; /* Enable scrolling when content overflows */
+    padding: 10px 0; /* Add padding for better appearance */
+    overflow-y: auto;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+
+#move-history-content div:nth-child(even) {
+    padding: 10px 0;
+    
+}
+#move-history-content div:nth-child(2n+1) {
+    padding: 10px 0;
+    
+}
+
+/* ::-webkit-scrollbar {
+    width: 12px; 
+} */
+
+#score-board {
+    max-height: 576px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+#player-score {
+    max-width: 100%;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row
+}
+
+#blue-score-board {
+    width: 48%;
+    height: 100%;
+    background-color: #006791;
+    border-radius: 5%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#red-score-board {
+    width: 48%;
+    height: 100%;
+    background-color: #9C090C;
+    border-radius: 5%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span.score{
+    font-size: 70px;
+    color: white;
+    font-family: monospace;
+    
+}
+
+#info-display{
+    font-weight: 1000;
+    color: #9C090C;
+}
+
+/* ---------------------------------------ROOM CONTAINER-------------------------- */
+#room-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: cornflowerblue;
+    height: 25vh;
+    width: 35vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 30%;
+    margin: 10px;
+}
+
+#button-box{
+    display: flex; /* Use flexbox to align divs side by side */
+    flex-wrap: wrap; /* Wrap to the next line if the screen is too narrow */
+  
+}
+
+.text-box{
+    height: 100%;
+    font-size: 100%;
+    font-family: monospace;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+.room-button{
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+
+
+
+
+body {
+    background-color: rgb(231, 231, 213);
+    
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.square {
+    height: 70px;
+    width: 70px;
+    position: relative;
+}
+
+
+img {
+    height: 62px;
+    margin: 4px;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: -9;
+}
+
+.piece {
+    position: relative;
+    z-index: 9;
+    transition: transform 0.3s ease;
+}
+.piece:hover{
+    transform: scale(1.15);
+    z-index: 10
+}
+
+
+
+.white {
+    background-color: #F5F5F5;
+}
+
+.green {
+    background-color: #035A03;
+}
+
+p {
+    font-family: monospace;
+    font-size: 25px;
+    
+}
+
+span {
+    font-weight: 1000;
+}
+
+
+.move-animation {
+    transition: left 0.5s ease, top 0.5s ease; /* You can adjust the duration and easing function */
+}
+
+#notif{
+    margin: 10px;
+    color: #9C090C;
+}
+
+.square.yellow{
+    background-color: rgba(227, 227, 27, 0.673);
+}
+
+.square.red{
+    background-color: #a01215d4;
+}
+
+.king-image {
+    position: absolute;
+    left: -10px;
+    top: -22px;
+    height: 40px;
+    transform: rotate(-10deg);
+}
+
+/* ---------------edit ka dito------------------- */
+
+.square.multiply {
+    background-image: url('assets/operands/multiplication.png'); /* Example background image for the multiply operator */
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.square.divide {
+    background-image: url('assets/operands/division.png'); /* Example background image for the divide operator */
+    background-size: 65px;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.square.subtract {
+    background-image: url('assets/operands/subtraction.png'); /* Example background image for the subtract operator */
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.square.add {
+    background-image: url('assets/operands/addition.png'); /* Example background image for the add operator */
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
