@@ -1,4 +1,4 @@
-const socket = io('http://localhost:3000')
+const socket = io('https://scidamaonline.onrender.com')
 const gameBoard = document.querySelector("#gameboard")
 const playerDisplay = document.querySelector("#player")
 const infoStatus = document.querySelector("#info")
